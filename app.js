@@ -3,20 +3,25 @@
 //Solution: Use Node.js to perform the profile look ups and server our template via HTTP
 
 //1. Create a web server
-
 var http = require('http');
 http.createServer(function (request, response) {
-  response.writeHead(200, {'Content-Type': 'text/plain'});
-  response.end('Yo');
+  homeRoute(request, response);
 }).listen(3000);
 console.log('Server running at http://127.0.0.1:3000/');
 
 //2. Handle HTTP route GET / and POST / i.e. Home
+function homeRoute(request, response) {
   //if url == "/" && GET
+  if(request.url === "/") {
     //show search
+    response.writeHead(200, {'Content-Type': 'text/plain'});
+    response.write("Header\n");
+    response.write("Search\n");
+    response.end('Footer\n');
+  }  
   //if url == "/" && POST
       //redirect to /:username
-
+}
 //3. Handle HTTP route GET /:username i.e. /micahcourey
   //if url == "/..."
     //get json from Treehouse
