@@ -1,4 +1,4 @@
-NodeJS Treehouse Project
+Node.js Treehouse Project
 ========================
 
 By Micah Courey, 5-Nov-2015
